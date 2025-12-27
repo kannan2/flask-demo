@@ -1,0 +1,17 @@
+#!/bin/bash
+# Update package lists and install git if it's not already installed
+# (Optional, depending on your AMI)
+# apt-get update -y # For Debian/Ubuntu-based systems
+yum update -y     # For Amazon Linux/RHEL-based systems
+yum install git -y
+
+# Navigate to the desired directory (e.g., the home directory of the default user or a specific web server directory)
+# For Amazon Linux/RHEL: /home/ec2-user/
+# For Ubuntu: /home/ubuntu/
+# cd /home/ec2-user/ # Adjust this path as needed for your specific AMI
+
+# Clone the public repository
+git clone git@github.com:kannan2/flask-demo.git ~/flask-demo
+cd ~/flask-demo
+# Run the Flask application setup script
+./flaskapp-run.sh
