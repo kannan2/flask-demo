@@ -1,0 +1,10 @@
+# Ignore an entire directory and everything in it
+.idea/
+venv/
+__pycache__/
+
+# Ignore files with a specific name in any directory
+**/.DS_Store
+
+# Ignore all log files
+*.log

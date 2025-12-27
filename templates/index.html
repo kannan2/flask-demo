@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>{% block title %} {{title}} {% endblock %}</h3>
+{% endblock %}
+
+{% block sitchecked %}{% if env == "sit" %}checked{% endif %}{% endblock %}
+
+{% block uatchecked %}{% if env == "uat" %}checked{% endif %}{% endblock %}
+
+{% if login %}
+{% block login %}{{login}}{% endblock %}
+{% endif %}
+
+{% if userid %}
+{% block userid %}{{user_id}}{% endblock %}
+{% endif %}
+
+{% if formcred %}
+{% block formcred %}{{formcred}}{% endblock %}
+{% endif %}
