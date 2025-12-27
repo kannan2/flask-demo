@@ -1,7 +1,12 @@
 #cloud-config
+package_update: true
+package_upgrade: all
+
 packages:
   - git
+  
 runcmd:
+  - ssh-keyscan github.com >> ~/.ssh/known_hosts
   - git clone git@github.com:kannan2/flask-demo.git ~/flask-demo
   - cd ~/flask-demo
   - ./flaskapp-run.sh

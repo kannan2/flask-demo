@@ -2,6 +2,7 @@
 # Update package lists and install git if it's not already installed
 # (Optional, depending on your AMI)
 # apt-get update -y # For Debian/Ubuntu-based systems
+# yum command has to be run with superuser privileges.
 yum update -y     # For Amazon Linux/RHEL-based systems
 yum install git -y
 
@@ -11,6 +12,7 @@ yum install git -y
 # cd /home/ec2-user/ # Adjust this path as needed for your specific AMI
 
 # Clone the public repository
+ssh-keyscan github.com >> ~/.ssh/known_hosts
 git clone git@github.com:kannan2/flask-demo.git ~/flask-demo
 cd ~/flask-demo
 # Run the Flask application setup script
