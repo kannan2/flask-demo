@@ -1,0 +1,7 @@
+#cloud-config
+packages:
+  - git
+  - python3-venv
+runcmd:
+  - git clone git@github.com:kannan2/flask-demo.git /home/ec2-user/flask-demo
+  - /home/ec2-user/flask-demo/flaskapp-run.sh
