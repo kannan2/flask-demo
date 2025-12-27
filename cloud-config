@@ -2,6 +2,6 @@
 packages:
   - git
 runcmd:
-  - git clone git@github.com:kannan2/flask-demo.git /home/ec2-user/flask-demo
-  - cd /home/ec2-user/flask-demo
+  - git clone git@github.com:kannan2/flask-demo.git ~/flask-demo
+  - cd ~/flask-demo
   - ./flaskapp-run.sh
