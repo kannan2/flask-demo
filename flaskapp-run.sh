@@ -21,6 +21,6 @@ echo "Installing required packages..."
 pip3 install -r requirements.txt
 export FLASK_APP=app.py
 echo "Running the Flask application..."
-# add  --host=0.0.0.0 --port=5000 to the flask run command if you want to specify host and port and to allow external access
-flask run > ~/flask-demo/flask-demo.log 2>&1 &
-echo "Flask application is running in the background. Logs are being written to ~/Dev/apps/flask-app/flaskapp.log"
+# add --host=0.0.0.0 --port=5000 to the flask run command if you want to specify host and port and to allow external access
+flask run --host=0.0.0.0 > ~/flask-demo/flask-demo.log 2>&1 &
+echo "Flask application is running in the background. Logs are being written to ~/flask-demo/flask-demo.log"
