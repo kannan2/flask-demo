@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Update package lists and install git if it's not already installed
 # (Optional, depending on your AMI)
 # apt-get update -y # For Debian/Ubuntu-based systems
